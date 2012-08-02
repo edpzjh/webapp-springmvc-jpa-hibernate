@@ -9,9 +9,9 @@
 	<description>Demonstrates an end to end starter spring mvc project, with hibernate + jpa persistence.</description>
 
 	<properties>
-		<java-version>1.5</java-version>
-		<org.slf4j-version>1.5.10</org.slf4j-version>
-		<org.springframework-version>3.0.5.RELEASE</org.springframework-version>
+		<java-version>1.6</java-version>
+		<org.slf4j-version>1.6.6</org.slf4j-version>
+		<org.springframework-version>3.1.2.RELEASE</org.springframework-version>
 	</properties>
 
 	<dependencies>
@@ -23,7 +23,7 @@
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-entitymanager</artifactId>
-			<version>3.4.0.GA</version>
+			<version>4.1.5.SP1</version>
 		</dependency>
 
 		<!-- JSTL dependencies -->
@@ -99,7 +99,7 @@
 		<dependency>
 			<groupId>log4j</groupId>
 			<artifactId>log4j</artifactId>
-			<version>1.2.15</version>
+			<version>1.2.17</version>
 			<exclusions>
 				<exclusion>
 					<groupId>javax.mail</groupId>
@@ -131,7 +131,7 @@
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
-			<version>4.5</version>
+			<version>4.10</version>
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
