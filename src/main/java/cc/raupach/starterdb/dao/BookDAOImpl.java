@@ -6,8 +6,8 @@ import javax.persistence.Query;
 
 import org.springframework.stereotype.Component;
 
-import cc.raupach.startderdb.util.GenericJpaDAOImpl;
 import cc.raupach.starterdb.entity.Book;
+import cc.raupach.starterdb.util.GenericJpaDAOImpl;
 
 
 @Component

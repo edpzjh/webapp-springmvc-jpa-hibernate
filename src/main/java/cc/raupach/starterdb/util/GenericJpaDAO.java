@@ -1,4 +1,4 @@
-package cc.raupach.startderdb.util;
+package cc.raupach.starterdb.util;
 
 import java.io.Serializable;
 import java.util.List;

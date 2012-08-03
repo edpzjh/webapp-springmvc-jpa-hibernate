@@ -7,7 +7,7 @@ import javax.persistence.Entity;
 import javax.persistence.OneToMany;
 import javax.persistence.OrderColumn;
 
-import cc.raupach.startderdb.util.AbstractBusinessObject;
+import cc.raupach.starterdb.util.AbstractBusinessObject;
 
 @Entity
 public class Author extends AbstractBusinessObject

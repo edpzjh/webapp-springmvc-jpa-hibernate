@@ -5,7 +5,7 @@ import java.util.Date;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 
-import cc.raupach.startderdb.util.AbstractBusinessObject;
+import cc.raupach.starterdb.util.AbstractBusinessObject;
 
 @Entity
 public class Book extends AbstractBusinessObject
