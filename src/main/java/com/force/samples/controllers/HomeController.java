@@ -14,16 +14,22 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.force.samples.dao.AuthorDAO;
 import com.force.samples.dao.BookDAO;
+import com.force.samples.entity.Author;
 import com.force.samples.entity.Book;
 
 @Controller
-public class HomeController {
+public class HomeController 
+{
 	
 	private static Logger log = LoggerFactory.getLogger(HomeController.class);
 
 	@Inject
 	private BookDAO bookDAO;
+	
+	@Inject
+    private AuthorDAO authorDAO; 
 	
 	@RequestMapping(method=RequestMethod.GET, value={"/", "/home"}) 
 	public String showHomePage (ModelAndView mv) {
@@ -34,9 +40,21 @@ public class HomeController {
 	
 	@RequestMapping(method=RequestMethod.GET, value="/listbooks")
 	public String listBooks (Model model) {
-		List<Book> books = bookDAO.getAllBooks();
+//		List<Book> books = bookDAO.getAllBooks();
 		
-		model.addAttribute("books", books);
+		List<Author> authors = authorDAO.getAllAuthors();
+		
+		for (Author author:authors)
+		{
+		    List<Book> myBooks = author.getBooks();
+		    
+		    for (Book book:myBooks)
+		    {
+		        log.info(book.getTitle());
+		    }
+		}
+		
+//		model.addAttribute("books", myBooks);
 		
 		return "listResults";
 	}

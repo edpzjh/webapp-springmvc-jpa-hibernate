@@ -2,7 +2,6 @@ package com.force.samples.entity;
 
 import java.util.Date;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -17,7 +16,7 @@ public class Book {
 	
 	private String title;
 	
-	@ManyToOne(cascade={CascadeType.PERSIST})
+	@ManyToOne
 	private Author author;
 	
 	private Date publicationDate;

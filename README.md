@@ -1,6 +1,6 @@
 ## Purpose ##
 
-Provide an integrated starter project for SpringMVC + Spring ORM, backed by Hibernate and PostgreSQL. 
+Provide an integrated starter project for SpringMVC + Spring ORM, backed by Hibernate and MySQL. 
 
 This project demonstrates a variety of useful functions right out of the box, and can be used as a starting point for a real web application.
 It makes extensive use of SpringMVC for the web tier. It also uses Spring to replace the direct access to the JPA entity manager API and 
@@ -11,7 +11,7 @@ instead uses Spring dependency injection patterns to access data.
 * Maven
 * Hibernate
 * JPA annotations
-* PostgreSQL
+* MySQL
 * JSTL
 * Servlets
 * Log4J via SLF4J
