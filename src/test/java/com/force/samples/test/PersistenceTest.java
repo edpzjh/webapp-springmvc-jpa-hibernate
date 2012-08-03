@@ -12,13 +12,22 @@ import junit.framework.Assert;
 
 import org.junit.BeforeClass;
 import org.junit.Test;
+import org.junit.runner.RunWith;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.test.context.transaction.TransactionConfiguration;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.force.samples.entity.Author;
 import com.force.samples.entity.Book;
 
 
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration(locations={"file:src/main/resources/applicationContext-core.xml"} )
+@Transactional
+@TransactionConfiguration(defaultRollback=true)
 public class PersistenceTest {
 
 	private static Logger log = null;
