@@ -1,5 +1,7 @@
 package com.force.samples.test;
 
+import java.util.List;
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.slf4j.Logger;
@@ -31,9 +33,9 @@ public class PersistenceTest
    private BookDAO bookDAO;
    
    @Test
-   public void testDatabaseSaveAndRetrieve()
+   public void testDatabaseSave()
    {
-      log.info("Running testDatabaseSaveAndRetrieve");
+      log.info("Running testDatabaseSave");
 
       Author author = new Author();
       author.setFirstName("Oliver");
@@ -41,9 +43,26 @@ public class PersistenceTest
 
       Book book = new Book();
       book.setAuthor(author);
+      book.setTitle("jdhsjg");
       author.getBooks().add(book);
       
       authorDAO.makePersistent(author);
       bookDAO.makePersistent(book);
+   }
+   
+   @Test
+   public void testDatabaseRetrieve()
+   {
+      List<Author> authors =  authorDAO.get();
+      
+      for (Author author: authors)
+      {
+         for (Book book:author.getBooks())
+         {
+            log.info(book.getTitle());
+         }
+      }
+      
+      
    }
 }
