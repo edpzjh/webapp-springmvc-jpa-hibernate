@@ -12,10 +12,11 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.transaction.TransactionConfiguration;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.force.samples.dao.AuthorDAO;
-import com.force.samples.dao.BookDAO;
-import com.force.samples.entity.Author;
-import com.force.samples.entity.Book;
+import cc.raupach.starterdb.dao.AuthorDAO;
+import cc.raupach.starterdb.dao.BookDAO;
+import cc.raupach.starterdb.entity.Author;
+import cc.raupach.starterdb.entity.Book;
+
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = { "file:src/main/resources/applicationContext-core.xml" })

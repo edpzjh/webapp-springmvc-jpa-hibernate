@@ -1,9 +1,10 @@
-package com.force.samples.dao;
+package cc.raupach.starterdb.dao;
 
 import java.util.List;
 
-import com.force.samples.entity.Book;
-import com.force.samples.util.GenericJpaDAO;
+import cc.raupach.startderdb.util.GenericJpaDAO;
+import cc.raupach.starterdb.entity.Book;
+
 
 public interface BookDAO extends GenericJpaDAO<Book, Integer>
 {

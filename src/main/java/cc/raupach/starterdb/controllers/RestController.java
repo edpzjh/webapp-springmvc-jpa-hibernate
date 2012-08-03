@@ -1,4 +1,4 @@
-package com.force.samples.controllers;
+package cc.raupach.starterdb.controllers;
 
 import javax.inject.Inject;
 
@@ -11,8 +11,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.force.samples.dao.BookDAO;
-import com.force.samples.entity.Book;
+import cc.raupach.starterdb.dao.BookDAO;
+import cc.raupach.starterdb.entity.Book;
+
 
 @Controller
 @RequestMapping(value="/rest")

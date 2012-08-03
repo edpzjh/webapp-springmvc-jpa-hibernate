@@ -1,4 +1,4 @@
-package com.force.samples.controllers;
+package cc.raupach.starterdb.controllers;
 
 import java.util.List;
 
@@ -14,10 +14,11 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.force.samples.dao.AuthorDAO;
-import com.force.samples.dao.BookDAO;
-import com.force.samples.entity.Author;
-import com.force.samples.entity.Book;
+import cc.raupach.starterdb.dao.AuthorDAO;
+import cc.raupach.starterdb.dao.BookDAO;
+import cc.raupach.starterdb.entity.Author;
+import cc.raupach.starterdb.entity.Book;
+
 
 @Controller
 public class HomeController 

@@ -1,11 +1,11 @@
-package com.force.samples.entity;
+package cc.raupach.starterdb.entity;
 
 import java.util.Date;
 
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 
-import com.force.samples.util.AbstractBusinessObject;
+import cc.raupach.startderdb.util.AbstractBusinessObject;
 
 @Entity
 public class Book extends AbstractBusinessObject

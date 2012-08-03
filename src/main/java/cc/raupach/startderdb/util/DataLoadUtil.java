@@ -1,4 +1,4 @@
-package com.force.samples.util;
+package cc.raupach.startderdb.util;
 
 import java.util.GregorianCalendar;
 
@@ -11,8 +11,8 @@ import javax.persistence.Query;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.force.samples.entity.Author;
-import com.force.samples.entity.Book;
+import cc.raupach.starterdb.entity.Author;
+import cc.raupach.starterdb.entity.Book;
 
 /**
  * Use this class to reset the database state for the test entities.

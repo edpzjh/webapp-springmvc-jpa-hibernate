@@ -1,4 +1,4 @@
-package com.force.samples.util;
+package cc.raupach.startderdb.util;
 
 import java.io.Serializable;
 import java.lang.reflect.ParameterizedType;

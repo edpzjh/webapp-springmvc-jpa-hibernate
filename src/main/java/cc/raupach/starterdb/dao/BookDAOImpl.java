@@ -1,4 +1,4 @@
-package com.force.samples.dao;
+package cc.raupach.starterdb.dao;
 
 import java.util.List;
 
@@ -6,8 +6,9 @@ import javax.persistence.Query;
 
 import org.springframework.stereotype.Component;
 
-import com.force.samples.entity.Book;
-import com.force.samples.util.GenericJpaDAOImpl;
+import cc.raupach.startderdb.util.GenericJpaDAOImpl;
+import cc.raupach.starterdb.entity.Book;
+
 
 @Component
 public class BookDAOImpl extends GenericJpaDAOImpl<Book, Integer> implements BookDAO {
