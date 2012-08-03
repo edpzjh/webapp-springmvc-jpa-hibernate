@@ -4,58 +4,52 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.OrderColumn;
 
+import com.force.samples.util.AbstractBusinessObject;
+
 @Entity
-public class Author {
-	
-	@Id
-	@GeneratedValue
-	private long id;
-	
-	private String firstName;
-	private String lastName;
+public class Author extends AbstractBusinessObject
+{
 
-	@OneToMany (mappedBy = "author")
-    @OrderColumn (name="viele")
-    private List<Book> books = new ArrayList<Book>();
-	
-	public long getId() {
-		return id;
-	}
+   private static final long serialVersionUID = 3098655439675836742L;
 
-	public void setId(long id) {
-		this.id = id;
-	}
+   private String firstName;
+   private String lastName;
 
-	public String getFirstName() {
-		return firstName;
-	}
+   @OneToMany(mappedBy = "author")
+   @OrderColumn(name = "viele")
+   private List<Book> books = new ArrayList<Book>();
 
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
-	}
+   public String getFirstName()
+   {
+      return firstName;
+   }
 
-	public String getLastName() {
-		return lastName;
-	}
+   public void setFirstName(String firstName)
+   {
+      this.firstName = firstName;
+   }
 
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
-	}
+   public String getLastName()
+   {
+      return lastName;
+   }
 
-    public List<Book> getBooks()
-    {
-        return books;
-    }
+   public void setLastName(String lastName)
+   {
+      this.lastName = lastName;
+   }
 
-    public void setBooks(List<Book> books)
-    {
-        this.books = books;
-    }
-	
-	
+   public List<Book> getBooks()
+   {
+      return books;
+   }
+
+   public void setBooks(List<Book> books)
+   {
+      this.books = books;
+   }
+
 }

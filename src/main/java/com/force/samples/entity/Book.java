@@ -3,54 +3,51 @@ package com.force.samples.entity;
 import java.util.Date;
 
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
+import com.force.samples.util.AbstractBusinessObject;
+
 @Entity
-public class Book {
-	
-	@Id
-	@GeneratedValue
-	private long id;
-	
-	private String title;
-	
-	@ManyToOne
-	private Author author;
-	
-	private Date publicationDate;
+public class Book extends AbstractBusinessObject
+{
 
-	public long getId() {
-		return id;
-	}
+   private static final long serialVersionUID = -3399441546287302881L;
 
-	public void setId(long id) {
-		this.id = id;
-	}
+   private String title;
 
-	public String getTitle() {
-		return title;
-	}
+   @ManyToOne
+   private Author author;
 
-	public void setTitle(String title) {
-		this.title = title;
-	}
+   private Date publicationDate;
 
-	public Author getAuthor() {
-		return author;
-	}
+   public String getTitle()
+   {
+      return title;
+   }
 
-	public void setAuthor(Author author) {
-		this.author = author;
-	}
+   public void setTitle(String title)
+   {
+      this.title = title;
+   }
 
-	public Date getPublicationDate() {
-		return publicationDate;
-	}
+   public Author getAuthor()
+   {
+      return author;
+   }
 
-	public void setPublicationDate(Date publicationDate) {
-		this.publicationDate = publicationDate;
-	}
-	
+   public void setAuthor(Author author)
+   {
+      this.author = author;
+   }
+
+   public Date getPublicationDate()
+   {
+      return publicationDate;
+   }
+
+   public void setPublicationDate(Date publicationDate)
+   {
+      this.publicationDate = publicationDate;
+   }
+
 }

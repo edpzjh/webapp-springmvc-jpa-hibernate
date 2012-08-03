@@ -2,22 +2,29 @@ package com.force.samples.dao;
 
 import java.util.List;
 
-import org.springframework.orm.jpa.support.JpaDaoSupport;
+import javax.persistence.Query;
+
+import org.springframework.stereotype.Component;
 
 import com.force.samples.entity.Book;
+import com.force.samples.util.GenericJpaDAOImpl;
 
-public class BookDAOImpl extends JpaDaoSupport implements BookDAO {
+@Component
+public class BookDAOImpl extends GenericJpaDAOImpl<Book, Integer> implements BookDAO {
 
-	public List<Book> getAllBooks() {
-		return getJpaTemplate().find("select b from Book b");
-	}
+	
 
-	public List<Book> getBooksByTitle(String title) {
-		return getJpaTemplate().find("select b from Book b where b.title=?1", title);
-	}
+	
 
-	public Book getBookById(Long id) {
-		return getJpaTemplate().find(Book.class, id);
-	}
+	public List<Book> getBooksByTitle(String title) 
+	    {
+	        Query q = entityManager.createQuery ("select b from Book b where b.title= :title" );
+	        q.setParameter("title", title);
+	    
 
+	        List<Book> results = q.getResultList();
+	        return results;
+	    }
+
+	
 }

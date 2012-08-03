@@ -1,12 +1,9 @@
 package com.force.samples.dao;
 
-import java.util.List;
-
 import com.force.samples.entity.Author;
+import com.force.samples.util.GenericJpaDAO;
 
-public interface AuthorDAO {
-	
-	List<Author> getAllAuthors();
-	
-	
+public interface AuthorDAO extends GenericJpaDAO<Author, Integer>
+{
+
 }

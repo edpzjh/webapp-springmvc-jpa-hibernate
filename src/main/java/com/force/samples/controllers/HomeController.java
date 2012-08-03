@@ -42,7 +42,7 @@ public class HomeController
 	public String listBooks (Model model) {
 //		List<Book> books = bookDAO.getAllBooks();
 		
-		List<Author> authors = authorDAO.getAllAuthors();
+		List<Author> authors = authorDAO.get();
 		
 		for (Author author:authors)
 		{

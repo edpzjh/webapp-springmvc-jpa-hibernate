@@ -24,11 +24,11 @@ public class RestController {
 	private BookDAO bookDAO;
 	
 	@RequestMapping(method=RequestMethod.GET, value="/book/{bookId}")
-	public @ResponseBody Book getBook (@PathVariable(value="bookId") long bookId, Model model) {
+	public @ResponseBody Book getBook (@PathVariable(value="bookId") Integer bookId, Model model) {
 		
 		log.info("Searching for book with id = " + bookId);
 		
-		Book book = bookDAO.getBookById(bookId);
+		Book book = bookDAO.findById (bookId);
 		return book;
 	}
 }

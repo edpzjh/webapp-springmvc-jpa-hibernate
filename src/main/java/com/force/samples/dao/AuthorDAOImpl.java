@@ -1,16 +1,16 @@
 package com.force.samples.dao;
 
-import java.util.List;
-
-import org.springframework.orm.jpa.support.JpaDaoSupport;
+import org.springframework.stereotype.Component;
 
 import com.force.samples.entity.Author;
+import com.force.samples.util.GenericJpaDAOImpl;
+import com.sun.xml.internal.bind.v2.model.core.ID;
 
-public class AuthorDAOImpl extends JpaDaoSupport implements AuthorDAO {
+@Component
+public class AuthorDAOImpl extends GenericJpaDAOImpl<Author, Integer> implements AuthorDAO
+{
 
-	public List<Author> getAllAuthors() {
-		return getJpaTemplate().find("select b from Author b");
-	}
+  
 
-
+  
 }
