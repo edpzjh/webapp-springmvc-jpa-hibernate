@@ -3,6 +3,7 @@ package cc.raupach.starterdb.entity;
 import java.util.Date;
 
 import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
 import cc.raupach.starterdb.util.AbstractBusinessObject;
@@ -16,6 +17,7 @@ public class Book extends AbstractBusinessObject
    private String title;
 
    @ManyToOne
+   @JoinColumn(name = "author_id", updatable = false, insertable = false)
    private Author author;
 
    private Date publicationDate;

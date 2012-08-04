@@ -4,8 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
-import javax.persistence.OrderColumn;
+
+import org.hibernate.annotations.IndexColumn;
 
 import cc.raupach.starterdb.util.AbstractBusinessObject;
 
@@ -18,8 +20,9 @@ public class Author extends AbstractBusinessObject
    private String firstName;
    private String lastName;
 
-   @OneToMany(mappedBy = "author")
-   @OrderColumn(name = "viele")
+   @OneToMany
+   @JoinColumn(name = "author_id")
+   @IndexColumn(name = "viele")
    private List<Book> books = new ArrayList<Book>();
 
    public String getFirstName()

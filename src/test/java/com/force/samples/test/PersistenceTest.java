@@ -46,9 +46,21 @@ public class PersistenceTest
       book.setAuthor(author);
       book.setTitle("jdhsjg");
       author.getBooks().add(book);
+      bookDAO.makePersistent(book);
+      
+      book = new Book();
+      book.setAuthor(author);
+      book.setTitle("1212112");
+      author.getBooks().add(book);
+      bookDAO.makePersistent(book);
+      
+      book = new Book();
+      book.setAuthor(author);
+      book.setTitle("xxxxxxxxxxxxxxxxssss");
+      author.getBooks().add(book);
+      bookDAO.makePersistent(book);
       
       authorDAO.makePersistent(author);
-      bookDAO.makePersistent(book);
    }
    
    @Test
