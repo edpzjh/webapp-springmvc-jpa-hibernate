@@ -6,8 +6,7 @@ import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
-
-import org.hibernate.annotations.IndexColumn;
+import javax.persistence.OrderColumn;
 
 import cc.raupach.starterdb.util.AbstractBusinessObject;
 
@@ -22,7 +21,7 @@ public class Author extends AbstractBusinessObject
 
    @OneToMany
    @JoinColumn(name = "author_id")
-   @IndexColumn(name = "viele")
+   @OrderColumn(name = "viele")
    private List<Book> books = new ArrayList<Book>();
 
    public String getFirstName()
